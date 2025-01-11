@@ -129,8 +129,6 @@ button:hover {
     font-size: 0.9rem;
   }
 }
-
-/* For tablets and small screens */
 @media (max-width: 768px) {
   .box {
     min-width: 50px;
@@ -152,7 +150,7 @@ button:hover {
 @media (max-width: 480px) {
   .box{
     min-width: 30px;
-    padding: 10px 10px;
+    padding: 10px 8px;
   }
   .box span {
     font-size: 1.2em;

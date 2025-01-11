@@ -77,24 +77,9 @@ function showRandomFact() {
   const fact = timeFacts[Math.floor(Math.random() * timeFacts.length)];
   document.getElementById('fact').textContent = fact;
 }
+document.getElementById('show-fact').addEventListener('click', showRandomFact);
 
-async function fetchWeather() {
-  const weatherInfo = document.getElementById('weather-info');
-  try {
-      const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=35&longitude=139&current_weather=true'); 
-      const data = await response.json();
-      weatherInfo.textContent = `Current Temperature: ${data.current_weather.temperature}°C`;
-  } catch (error) {
-      weatherInfo.textContent = 'Unable to fetch weather information.';
-  }
-}
-
-window.onload = () => {
-  updateBackground();
-  setInterval(updateClock, 1000);
-  fetchWeather();
-  showRandomFact();
-
-  document.getElementById('timezone').addEventListener('change', updateClock);
-  document.getElementById('show-fact').addEventListener('click', showRandomFact);
-};
+updateBackground();
+setInterval(updateClock, 1000);
+fetchWeather();
+showRandomFact();
