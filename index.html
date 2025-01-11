@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    <div class="clock">
+      <h1 id="greeting"></h1>
+      <div id="digital-clock">
+        <div class="time">
+          <div class="box">
+            <span id="hours">08</span>
+            <p>HOURS</p>
+          </div>
+
+          <div class="box">
+            <span id="minutes">00</span>
+            <p>MINUTES</p>
+          </div>
+
+          <div class="box">
+            <span id="seconds">00</span>
+            <p>SECONDS</p>
+          </div>
+
+          <div class="box">
+            <span id="ampm">AM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <label for="timezone">Select Time Zone:</label>
+        <select id="timezone">
+          <option value="local" selected>Local Time</option>
+          <option value="UTC">UTC</option>
+          <option value="Asia/Kolkata">India (IST)</option>
+          <option value="America/New_York">New York (EST)</option>
+          <option value="Europe/London">London (GMT)</option>
+        </select>
+      </div>
+
+      <button id="countdownBtn">Set Countdown Timer</button>
+      <div id="countdown"></div>
+
+      <div id="weather">
+        <p id="weather-info">Fetching Weather...</p>
+      </div>
+
+      <div id="time-facts">
+        <p id="fact">"Time is an illusion."</p>
+      </div>
+
+      <div id="buttons">
+        <button id="show-fact">Show Random Fact</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
